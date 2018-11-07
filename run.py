@@ -13,6 +13,10 @@ with open('config.json') as json_data_file:
     src = data["src"]
     dst = data["dst"]
 
+# Uncomment if your directory has an escape character
+# src = "source/path"
+# dst = "destination/path"
+
 def gen_find(filepat,top):
     for path, dirlist, filelist in os.walk(top):
         for name in fnmatch.filter(filelist,filepat):
