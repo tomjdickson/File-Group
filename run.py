@@ -22,7 +22,8 @@ def gen_find(filepat,top):
         for name in fnmatch.filter(filelist,filepat):
             yield os.path.join(path,name)
 
-# Example use
+# You can change *.* to *.xslx if you are looking for xlsx files. 
+# THis allows you to drill down what you are looking for.
 
 if __name__ == '__main__':
     filesToMove = gen_find("*.*",src)
